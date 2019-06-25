@@ -1,0 +1,17 @@
+.top {
+  width: 100%;
+  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.top .img {
+  width: 28PX;
+  height: 28PX;
+}
+.top .right .img {
+  margin-right: 15PX;
+}
+.top .left .img {
+  margin-left: 15PX;
+}
