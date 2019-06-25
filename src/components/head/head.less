@@ -3,8 +3,34 @@
     width:100%;
     .img{
       width:100%;
-      height:60PX;
+      height:150PX;
       filter:blur(6PX)
+    }
+  }
+  .store{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20PX;
+    margin-top: -100PX;
+    .store_img {
+      width:80PX;
+      height:80PX;
+      border-radius:6PX;
+    }
+    .store_text{
+      z-index:2;
+      margin-left: 10PX;
+      display: flex;
+      flex-direction: column;
+      font-size:18PX;
+      color:#fff;
+      .tags_text{
+        border:1PX solid greenyellow;
+        padding:2PX 4PX;
+        font-size:12PX;
+        border-radius: 6PX;
+        margin-left: 10PX;
+      }
     }
   }
 }
