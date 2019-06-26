@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Button, Text } from '@tarojs/components'
-import { } from 'taro-ui'
+import { AtTabs, AtTabsPane } from 'taro-ui'
 class Food extends Component {
   constructor() {
     super(...arguments)
