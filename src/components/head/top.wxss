@@ -4,11 +4,11 @@
   top: 0;
   z-index: 2;
   width: 100%;
-  padding-top: 10PX;
-  height: 28PX;
+  height: 60PX;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .top .img {
   width: 28PX;

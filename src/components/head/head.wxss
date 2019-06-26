@@ -22,8 +22,10 @@
   margin-left: 10PX;
   display: flex;
   flex-direction: column;
-  font-size: 18PX;
+  font-size: 17PX;
+  justify-content: space-between;
   color: #fff;
+  height: 80PX;
 }
 .head .store .store_text .tags_text {
   border: 1PX solid greenyellow;

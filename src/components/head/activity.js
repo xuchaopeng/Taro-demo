@@ -27,11 +27,27 @@ class Activity extends Component {
       ]
     }
   }
+  getTextByType(type) {
+    switch (type) {
+      case 'cut':
+        return '减';
+        break;
+      default:
+        return '减';
+        break;
+    }
+  }
+
+  getLine(arr) {
+    return arr.map((item, index) => `满${item.total}减${item.cut}`).join(';')
+  }
+
   render() {
+    let { activity: [firstItem] } = this.state;
     return (<View className='activity'>
-      <Text className="type">减</Text>
-      <Text>满48减10;满58减15</Text>
-      <Text className="length">3个活动</Text>
+      <Text className="type">{this.getTextByType(firstItem.cut)}</Text>
+      <Text>{this.getLine(firstItem.info)}</Text>
+      <Text className="length">{this.state.activity.length}个活动</Text>
     </View>)
   }
 }
