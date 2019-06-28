@@ -1,0 +1,14 @@
+.cata {
+  display: flex;
+  flex-direction: column;
+}
+.cata .cata_name {
+  display: block;
+  width: 100PX;
+  height: 48PX;
+  line-height: 48Px;
+  text-align: center;
+}
+.cata .select {
+  color: #ec4b4b;
+}
