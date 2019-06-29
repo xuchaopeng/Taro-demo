@@ -1,9 +1,11 @@
 .foodlist{
   padding: 10PX;
+  flex-grow:1;
   .foodlist_item{
     margin-top:15PX;
     display: flex;
     flex-direction: row;
+    flex-grow:1;
     .foodlist_item_info{
       display: flex;
       flex-direction: column;
@@ -11,6 +13,8 @@
       margin-left: 10PX;
       height: 80PX;
       justify-content: space-between;
+      flex-grow:1;
+      position: relative;
       .price{
         color:red;
       }
