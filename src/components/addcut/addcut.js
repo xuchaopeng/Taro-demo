@@ -28,8 +28,10 @@ class AddCut extends Component {
         setFoodCount(this.props.food, this.state.num, 'cut', () => {
           this.setState({
             num: getFoodCount(this.props.food)
-          })
+          });
+          myEvent.emit('addCut');
         })
+
       } else {
         console.error('当前加减菜品出现异常')
       }
@@ -41,8 +43,10 @@ class AddCut extends Component {
       setFoodCount(this.props.food, this.state.num, 'add', () => {
         this.setState({
           num: getFoodCount(this.props.food)
-        })
+        });
+        myEvent.emit('addCut');
       })
+
     }
   }
 
@@ -57,4 +61,7 @@ class AddCut extends Component {
   }
 }
 
+AddCut.defaultProps = {
+  food:null
+}
 export default AddCut
