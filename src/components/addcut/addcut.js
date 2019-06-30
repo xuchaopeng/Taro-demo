@@ -1,8 +1,8 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text, Image } from '@tarojs/components'
-import { getFoodCount, setFoodCount } from '../../utils/common'
+import { getFoodCount, setFoodCount, getEvent } from '../../utils/common'
 import './addcut.less'
-
+let myEvent = getEvent();
 class AddCut extends Component {
   constructor() {
     super(...arguments)
@@ -14,6 +14,11 @@ class AddCut extends Component {
   componentDidMount() {
     this.setState({
       num: getFoodCount(this.props.food)
+    })
+    myEvent.on('changeCate', () => {
+      this.setState({
+        num: getFoodCount(this.props.food)
+      })
     })
   }
 

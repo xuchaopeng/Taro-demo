@@ -1,5 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Button, Text } from '@tarojs/components'
+import { getEvent } from '../../utils/common'
+let event = getEvent();
 import './cata.less'
 class Cata extends Component {
   constructor() {
@@ -22,10 +24,12 @@ class Cata extends Component {
       this.setState({ selectCata: item }, () => {
         this.props.onChangeCate && this.props.onChangeCate(this.state.selectCata)
       })
+      event.emit('changeCate')
     } else if (this.state.selectCata.id !== item.id) {
       this.setState({ selectCata: item }, () => {
         this.props.onChangeCate && this.props.onChangeCate(this.state.selectCata)
       })
+      event.emit('changeCate')
     }
   }
   render() {
